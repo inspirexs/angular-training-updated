@@ -1,6 +1,6 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
-import { DocumentRequest } from 'src/app/components/models/document-request';
+import { DocumentRequest } from 'src/app/models/document-request';
 import { MercuryClientService } from 'src/app/services/mercury-client.service';
 import { MessageService } from 'src/app/services/message.service';
 import { DocsResultComponent } from './docs-result/docs-result.component';

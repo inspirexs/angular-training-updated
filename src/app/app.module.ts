@@ -27,6 +27,7 @@ import { appRoutes } from './app.route';
 import { Subroute1Component } from './components/content/content-subroutes/subroute1/subroute1.component';
 import { Subroute2Component } from './components/content/content-subroutes/subroute2/subroute2.component';
 import { AuthGuard } from './guards/auth.guard';
+import { MyAccountComponent } from './components/my-account/my-account.component';
 
 @NgModule({
   declarations: [
@@ -36,7 +37,8 @@ import { AuthGuard } from './guards/auth.guard';
     ContentComponent,
     ContentInnerComponent,
     Subroute1Component,
-    Subroute2Component
+    Subroute2Component,
+    MyAccountComponent
   ],
   imports: [
     BrowserModule,

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Traveller } from 'src/app/components/models/traveller';
+import { Traveller } from 'src/app/models/traveller';
 
 @Component({
   selector: 'app-docs-result',
