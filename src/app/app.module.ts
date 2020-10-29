@@ -8,7 +8,6 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './components/login/login.component';
 import { ContentComponent } from './components/content/content.component';
-import { DocsComponent } from './components/docs/docs.component';
 
 import { MatToolbarModule } from '@angular/material/toolbar';
 import { MatSidenavModule } from '@angular/material/sidenav';
@@ -21,7 +20,8 @@ import { MatInputModule } from '@angular/material/input';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MercuryClientService } from './services/mercury-client.service';
 import { ContentInnerComponent } from './components/content/content-inner/content-inner.component';
-import { DocsResultComponent } from './components/docs/docs-result/docs-result.component';
+import { DocsComponent } from './modules/document/components/docs/docs.component';
+import { DocumentModule } from './modules/document/document.module';
 
 @NgModule({
   declarations: [
@@ -29,9 +29,7 @@ import { DocsResultComponent } from './components/docs/docs-result/docs-result.c
     HeaderComponent,
     LoginComponent,
     ContentComponent,
-    DocsComponent,
-    ContentInnerComponent,
-    DocsResultComponent
+    ContentInnerComponent
   ],
   imports: [
     BrowserModule,
@@ -48,7 +46,9 @@ import { DocsResultComponent } from './components/docs/docs-result/docs-result.c
     MatMenuModule,
     MatDividerModule,
     MatInputModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+
+    DocumentModule
   ],
   providers: [
     MercuryClientService
