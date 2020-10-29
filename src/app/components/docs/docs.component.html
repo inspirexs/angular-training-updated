@@ -1,9 +1,62 @@
 <p>docs works!</p>
 
-<h1>Traveller Details</h1>
-<p>First Name: {{traveller?.firstName}}</p>
-<p>Last Name: {{traveller?.lastName}}</p>
-<p>Email: {{traveller?.emailAddress}}</p>
-<p>Email Masked: {{traveller?.emailAddressMasked}}</p>
+<div *ngIf="traveller != null">
+  <h1>Traveller Details</h1>
+  <p>First Name: {{traveller?.firstName}}</p>
+  <p>Last Name: {{traveller?.lastName}}</p>
+  <p>Email: {{traveller?.emailAddress}}</p>
+  <p>Email: {{traveller?.emailAddressMasked}}</p>
+</div>
 
-<button mat-raised-button color="primary" (click)="test()">Get Traveller</button>
+<form class="example-form" [formGroup]="documentForm" (ngSubmit)="submitForm()" >
+  <mat-form-field class="example-full-width" style="width: 500px;">
+    <mat-label>Document Type</mat-label>
+    <input
+    formControlName="documentType"
+    matInput placeholder="Enter Your Document Type" value="">
+    <mat-error *ngIf="documentForm.get('documentType').hasError('required') && documentForm.get('documentType').touched">
+      Document Type is <strong>required</strong>
+    </mat-error>
+    <mat-error *ngIf="documentForm.get('documentType').hasError('pattern') && documentForm.get('documentType').touched">
+      Document Type has to be <strong>PASSPORT or ID_CARD</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <br />
+
+  <mat-form-field class="example-full-width" style="width: 500px;">
+    <mat-label>Document Number</mat-label>
+    <input
+    formControlName="documentNumber"
+    matInput placeholder="Enter Your Document Number" value="">
+    <mat-error *ngIf="documentForm.get('documentNumber').errors && documentForm.get('documentNumber').touched">
+      Document Number is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <br />
+
+  <mat-form-field class="example-full-width" style="width: 500px;">
+    <mat-label>Document Country</mat-label>
+    <input
+    formControlName="documentCountry"
+    matInput placeholder="Enter Your Document Country" value="">
+    <mat-error *ngIf="documentForm.get('documentCountry').errors && documentForm.get('documentCountry').touched">
+      Document Country is <strong>required</strong>
+    </mat-error>
+  </mat-form-field>
+
+  <br />
+
+  <button [disabled]="!documentForm.valid || !documentForm.dirty" mat-raised-button color="primary">Submit Form</button>
+</form>
+
+
+<br />
+<br />
+<br />
+
+<button mat-raised-button color="primary" (click)="getDefaultTraveller()">Get Default Traveller</button>
+&nbsp;
+<button mat-raised-button color="basic" (click)="clearTraveller()">Clear</button>
+

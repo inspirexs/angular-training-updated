@@ -17,6 +17,7 @@ import { MatButtonModule } from '@angular/material/button';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDividerModule } from '@angular/material/divider';
 import { MatMenuModule } from '@angular/material/menu';
+import { MatInputModule } from '@angular/material/input';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MercuryClientService } from './services/mercury-client.service';
 
@@ -42,6 +43,7 @@ import { MercuryClientService } from './services/mercury-client.service';
     MatIconModule,
     MatMenuModule,
     MatDividerModule,
+    MatInputModule,
     FlexLayoutModule
   ],
   providers: [
