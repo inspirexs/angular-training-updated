@@ -18,6 +18,6 @@ export class LoginComponent implements OnInit {
 
   login(): void{
     this.authSerivce.login(this.token);
-    this.router.navigate(['/content']);
+    this.router.navigate(['/my-account']);
   }
 }

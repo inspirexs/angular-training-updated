@@ -4,7 +4,7 @@
     <mat-icon class="mr" >login</mat-icon>
     Login
   </button>
-  <button mat-button fxHide.lt-md  *ngIf="loggedIn()">
+  <button mat-button fxHide.lt-md [routerLink]="['/my-account']" routerLinkActive="mat-accent" *ngIf="loggedIn()">
     <mat-icon class="mr" >slideshow</mat-icon>
     My Account
   </button>
