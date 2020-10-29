@@ -24,6 +24,8 @@ import { DocsComponent } from './modules/document/components/docs/docs.component
 import { DocumentModule } from './modules/document/document.module';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './app.route';
+import { Subroute1Component } from './components/content/content-subroutes/subroute1/subroute1.component';
+import { Subroute2Component } from './components/content/content-subroutes/subroute2/subroute2.component';
 
 @NgModule({
   declarations: [
@@ -31,7 +33,9 @@ import { appRoutes } from './app.route';
     HeaderComponent,
     LoginComponent,
     ContentComponent,
-    ContentInnerComponent
+    ContentInnerComponent,
+    Subroute1Component,
+    Subroute2Component
   ],
   imports: [
     BrowserModule,
@@ -49,8 +53,6 @@ import { appRoutes } from './app.route';
     MatDividerModule,
     MatInputModule,
     FlexLayoutModule,
-
-    DocumentModule,
 
     RouterModule.forRoot(appRoutes)
   ],

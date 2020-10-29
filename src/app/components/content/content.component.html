@@ -9,3 +9,9 @@
 <h1>{{formValue}}</h1>
 
 <app-content-inner [name]="formValue"></app-content-inner>
+
+<button mat-raised-button color="accent" [routerLink]="['/content/subroute1']">Subroute1</button>
+&nbsp;
+<button mat-raised-button color="accent" [routerLink]="['/content/subroute2']">Subroute2</button>
+
+<router-outlet></router-outlet>

@@ -1,6 +1,6 @@
 <mat-toolbar fxLayout="row" color="primary">
   <span fxFlex>Angular Material Training</span>
-  <button mat-button fxHide.lt-md [routerLink]="['/']">
+  <button mat-button fxHide.lt-md [routerLink]="['/login']" routerLinkActive="mat-accent">
     <mat-icon class="mr" >login</mat-icon>
     Login
   </button>
@@ -8,11 +8,11 @@
     <mat-icon class="mr" >slideshow</mat-icon>
     My Account
   </button>
-  <button mat-button fxHide.lt-md [routerLink]="['/content']">
+  <button mat-button fxHide.lt-md [routerLink]="['/content']" routerLinkActive="mat-accent">
     <mat-icon class="mr" >slideshow</mat-icon>
     Content
   </button>
-  <button mat-button fxHide.lt-md [routerLink]="['/document']">
+  <button mat-button fxHide.lt-md [routerLink]="['/document']" routerLinkActive="mat-accent">
     <mat-icon class="mr" >rss_feed</mat-icon>
     Docs
   </button>
@@ -25,7 +25,7 @@
       <mat-icon>more_vert</mat-icon>
   </button>
   <mat-menu #dropMenu="matMenu">
-    <button mat-button [routerLink]="['/']">
+    <button mat-button [routerLink]="['/login']" routerLinkActive="mat-accent">
       <mat-icon class="mr" >login</mat-icon>
       Login
     </button>
@@ -35,12 +35,12 @@
       My Account
     </button>
     <mat-divider></mat-divider>
-    <button mat-button [routerLink]="['/content']">
+    <button mat-button [routerLink]="['/content']" routerLinkActive="mat-accent">
       <mat-icon class="mr" >slideshow</mat-icon>
       Content
     </button>
     <mat-divider></mat-divider>
-    <button mat-button [routerLink]="['/document']">
+    <button mat-button [routerLink]="['/document']" routerLinkActive="mat-accent">
       <mat-icon class="mr" >rss_feed</mat-icon>
       Docs
     </button>
