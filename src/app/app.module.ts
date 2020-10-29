@@ -22,6 +22,8 @@ import { MercuryClientService } from './services/mercury-client.service';
 import { ContentInnerComponent } from './components/content/content-inner/content-inner.component';
 import { DocsComponent } from './modules/document/components/docs/docs.component';
 import { DocumentModule } from './modules/document/document.module';
+import { RouterModule } from '@angular/router';
+import { appRoutes } from './app.route';
 
 @NgModule({
   declarations: [
@@ -48,7 +50,9 @@ import { DocumentModule } from './modules/document/document.module';
     MatInputModule,
     FlexLayoutModule,
 
-    DocumentModule
+    DocumentModule,
+
+    RouterModule.forRoot(appRoutes)
   ],
   providers: [
     MercuryClientService
