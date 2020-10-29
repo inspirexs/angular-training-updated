@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Traveller } from 'src/app/models/traveller';
 import { MercuryClientService } from 'src/app/services/mercury-client.service';
 
@@ -10,14 +11,12 @@ import { MercuryClientService } from 'src/app/services/mercury-client.service';
 export class MyAccountComponent implements OnInit {
   traveller: Traveller;
 
-  constructor(private mercuryClient: MercuryClientService) { }
+  constructor(private mercuryClient: MercuryClientService,
+              private route: ActivatedRoute) { }
 
   ngOnInit(): void {
-    this.mercuryClient.getTraveller('PASSPORT', 'LU01201LU', 'ALA').subscribe(data => {
-      console.log(data);
-      this.traveller = data;
-    }, error => {
-      console.log(error);
+    this.route.data.subscribe(data => {
+      this.traveller = data['traveller'];
     });
   }
 

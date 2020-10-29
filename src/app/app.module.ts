@@ -28,6 +28,7 @@ import { Subroute1Component } from './components/content/content-subroutes/subro
 import { Subroute2Component } from './components/content/content-subroutes/subroute2/subroute2.component';
 import { AuthGuard } from './guards/auth.guard';
 import { MyAccountComponent } from './components/my-account/my-account.component';
+import { TravellerResolver } from './resolvers/traveller.resolver';
 
 @NgModule({
   declarations: [
@@ -62,7 +63,9 @@ import { MyAccountComponent } from './components/my-account/my-account.component
   providers: [
     MercuryClientService,
 
-    AuthGuard
+    AuthGuard,
+
+    TravellerResolver
   ],
   bootstrap: [AppComponent]
 })
