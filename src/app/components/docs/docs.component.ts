@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { MercuryClientService } from 'src/app/services/mercury-client.service';
+import { Traveller } from '../models/traveller';
 
 @Component({
   selector: 'app-docs',
@@ -7,7 +8,7 @@ import { MercuryClientService } from 'src/app/services/mercury-client.service';
   styleUrls: ['./docs.component.css']
 })
 export class DocsComponent implements OnInit {
-  traveller: any = null;
+  traveller: Traveller = null;
 
   constructor(private mercuryClient: MercuryClientService) { }
 
