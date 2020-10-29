@@ -9,7 +9,7 @@ export const appRoutes: Routes = [
   { path: 'login', component: LoginComponent },
   { path: 'content', component: ContentComponent, children: [
     { path: 'subroute1', component: Subroute1Component },
-    { path: 'subroute2', component: Subroute2Component },
+    { path: 'subroute2/:id', component: Subroute2Component },
   ] },
   { path: 'document', loadChildren: () => import('./modules/document/document.module').then(m => m.DocumentModule) },
   { path: '**', redirectTo: 'login', pathMatch: 'full' },
