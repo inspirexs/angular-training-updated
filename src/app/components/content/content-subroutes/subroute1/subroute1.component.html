@@ -1,1 +1,9 @@
 <p>subroute1 works!</p>
+
+<mat-form-field class="example-full-width" style="width: 500px;">
+  <mat-label>Message</mat-label>
+  <input
+  matInput placeholder="Enter Your Message" [(ngModel)]="message">
+</mat-form-field>
+
+<button mat-raised-button color="accent" (click)="sendMessage()">Send Message</button>
