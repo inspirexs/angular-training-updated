@@ -21,6 +21,7 @@ import { MatInputModule } from '@angular/material/input';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MercuryClientService } from './services/mercury-client.service';
 import { ContentInnerComponent } from './components/content/content-inner/content-inner.component';
+import { DocsResultComponent } from './components/docs/docs-result/docs-result.component';
 
 @NgModule({
   declarations: [
@@ -29,7 +30,8 @@ import { ContentInnerComponent } from './components/content/content-inner/conten
     LoginComponent,
     ContentComponent,
     DocsComponent,
-    ContentInnerComponent
+    ContentInnerComponent,
+    DocsResultComponent
   ],
   imports: [
     BrowserModule,

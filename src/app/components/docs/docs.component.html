@@ -1,12 +1,6 @@
 <p>docs works!</p>
 
-<div *ngIf="traveller != null">
-  <h1>Traveller Details</h1>
-  <p>First Name: {{traveller?.firstName}}</p>
-  <p>Last Name: {{traveller?.lastName}}</p>
-  <p>Email: {{traveller?.emailAddress}}</p>
-  <p>Email: {{traveller?.emailAddressMasked}}</p>
-</div>
+<app-docs-result></app-docs-result>
 
 <form class="example-form" [formGroup]="documentForm" (ngSubmit)="submitForm()" >
   <mat-form-field class="example-full-width" style="width: 500px;">
