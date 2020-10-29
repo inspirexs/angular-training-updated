@@ -20,6 +20,7 @@ import { MatMenuModule } from '@angular/material/menu';
 import { MatInputModule } from '@angular/material/input';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { MercuryClientService } from './services/mercury-client.service';
+import { ContentInnerComponent } from './components/content/content-inner/content-inner.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { MercuryClientService } from './services/mercury-client.service';
     HeaderComponent,
     LoginComponent,
     ContentComponent,
-    DocsComponent
+    DocsComponent,
+    ContentInnerComponent
   ],
   imports: [
     BrowserModule,

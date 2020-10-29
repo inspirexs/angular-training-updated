@@ -1,1 +1,11 @@
 <p>content works!</p>
+
+<mat-form-field class="example-full-width" style="width: 500px;">
+  <mat-label>Document Type</mat-label>
+  <input
+  matInput placeholder="Enter Your Document Type" [(ngModel)]="formValue">
+</mat-form-field>
+
+<h1>{{formValue}}</h1>
+
+<app-content-inner [name]="formValue"></app-content-inner>
