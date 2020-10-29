@@ -8,6 +8,8 @@ import { MatInputModule } from '@angular/material/input';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { DocsComponent } from './components/docs/docs.component';
 import { DocsResultComponent } from './components/docs/docs-result/docs-result.component';
+import { RouterModule } from '@angular/router';
+import { documentRoutes } from './document.route';
 
 
 
@@ -25,10 +27,12 @@ import { DocsResultComponent } from './components/docs/docs-result/docs-result.c
     MatButtonModule,
     MatIconModule,
     MatInputModule,
-    FlexLayoutModule
+    FlexLayoutModule,
+
+    RouterModule.forChild(documentRoutes)
   ],
   exports: [
-    DocsComponent
+
   ]
 })
 export class DocumentModule { }
