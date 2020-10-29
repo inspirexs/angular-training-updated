@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { AuthService } from 'src/app/services/auth.service';
 import { MessageService } from 'src/app/services/message.service';
 
 @Component({
@@ -9,7 +10,8 @@ import { MessageService } from 'src/app/services/message.service';
 export class HeaderComponent implements OnInit {
   message: string;
 
-  constructor(private messageService: MessageService) { }
+  constructor(private messageService: MessageService,
+              private authService: AuthService) { }
 
   ngOnInit(): void {
     this.messageService.getSubject().subscribe( data => {
@@ -17,4 +19,11 @@ export class HeaderComponent implements OnInit {
     });
   }
 
+  loggedIn(): boolean{
+    return this.authService.loggedIn();
+  }
+
+  logout(): void{
+    this.authService.logout();
+  }
 }

@@ -1,1 +1,9 @@
 <p>login works!</p>
+
+<mat-form-field class="example-full-width" style="width: 500px;">
+  <mat-label>Login</mat-label>
+  <input
+  matInput placeholder="Enter Your Login Credentials" [(ngModel)]="token">
+</mat-form-field>
+<br />
+<button mat-raised-button color="primary" (click)="login()">Login</button>

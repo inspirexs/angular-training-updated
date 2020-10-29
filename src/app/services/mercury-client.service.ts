@@ -2,11 +2,13 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { Traveller } from '../components/models/traveller';
+import { AuthService } from './auth.service';
 
 @Injectable()
 export class MercuryClientService {
 
-  constructor(private httpClient: HttpClient) { }
+  constructor(private httpClient: HttpClient,
+              private authService: AuthService) { }
 
   test(): void{
     alert('TEST WORKS');
@@ -14,7 +16,7 @@ export class MercuryClientService {
 
   getTraveller(documentType: string, documentNumber: string, documentCountry: string): Observable<Traveller>{
     const httpHeaders: HttpHeaders = new HttpHeaders({
-      Authorization: 'mobile_traveller_app_token'
+      Authorization: this.authService.getToken()
     });
 
     return this.httpClient.get<Traveller>('https://mercury-api.st.globalblue.com:443/api/Globalblue/3.0/Members/documentType=' + documentType + '&documentNumber=' + documentNumber + '&documentCountry=' + documentCountry, { headers: httpHeaders } );

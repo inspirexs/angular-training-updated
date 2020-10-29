@@ -1,22 +1,22 @@
 <mat-toolbar fxLayout="row" color="primary">
   <span fxFlex>Angular Material Training {{message}}</span>
-  <button mat-button fxHide.lt-md [routerLink]="['/login']" routerLinkActive="mat-accent">
+  <button mat-button fxHide.lt-md [routerLink]="['/login']" routerLinkActive="mat-accent" *ngIf="!loggedIn()">
     <mat-icon class="mr" >login</mat-icon>
     Login
   </button>
-  <button mat-button fxHide.lt-md>
+  <button mat-button fxHide.lt-md  *ngIf="loggedIn()">
     <mat-icon class="mr" >slideshow</mat-icon>
     My Account
   </button>
-  <button mat-button fxHide.lt-md [routerLink]="['/content']" routerLinkActive="mat-accent">
+  <button mat-button fxHide.lt-md [routerLink]="['/content']" routerLinkActive="mat-accent" *ngIf="loggedIn()">
     <mat-icon class="mr" >slideshow</mat-icon>
     Content
   </button>
-  <button mat-button fxHide.lt-md [routerLink]="['/document']" routerLinkActive="mat-accent">
+  <button mat-button fxHide.lt-md [routerLink]="['/document']" routerLinkActive="mat-accent" *ngIf="loggedIn()">
     <mat-icon class="mr" >rss_feed</mat-icon>
     Docs
   </button>
-  <button mat-button fxHide.lt-md>
+  <button mat-button fxHide.lt-md *ngIf="loggedIn()" (click)="logout()">
     <mat-icon class="mr">exit_to_app</mat-icon>
     Logout
   </button>
@@ -25,27 +25,27 @@
       <mat-icon>more_vert</mat-icon>
   </button>
   <mat-menu #dropMenu="matMenu">
-    <button mat-button [routerLink]="['/login']" routerLinkActive="mat-accent">
+    <button mat-button [routerLink]="['/login']" routerLinkActive="mat-accent" *ngIf="!loggedIn()">
       <mat-icon class="mr" >login</mat-icon>
       Login
     </button>
     <mat-divider></mat-divider>
-    <button mat-button >
+    <button mat-button  *ngIf="loggedIn()">
       <mat-icon class="mr">slideshow</mat-icon>
       My Account
     </button>
     <mat-divider></mat-divider>
-    <button mat-button [routerLink]="['/content']" routerLinkActive="mat-accent">
+    <button mat-button [routerLink]="['/content']" routerLinkActive="mat-accent" *ngIf="loggedIn()">
       <mat-icon class="mr" >slideshow</mat-icon>
       Content
     </button>
     <mat-divider></mat-divider>
-    <button mat-button [routerLink]="['/document']" routerLinkActive="mat-accent">
+    <button mat-button [routerLink]="['/document']" routerLinkActive="mat-accent" *ngIf="loggedIn()">
       <mat-icon class="mr" >rss_feed</mat-icon>
       Docs
     </button>
     <mat-divider></mat-divider>
-    <button mat-button >
+    <button mat-button  *ngIf="loggedIn()" (click)="logout()">
       <mat-icon class="mr">exit_to_app</mat-icon>
       Logout
     </button>
