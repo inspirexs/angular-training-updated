@@ -14,10 +14,10 @@
     <input
     formControlName="documentType"
     matInput placeholder="Enter Your Document Type" value="">
-    <mat-error *ngIf="documentForm.get('documentType').hasError('required') && documentForm.get('documentType').touched">
+    <mat-error *ngIf="documentForm.get('documentType').hasError('required')">
       Document Type is <strong>required</strong>
     </mat-error>
-    <mat-error *ngIf="documentForm.get('documentType').hasError('pattern') && documentForm.get('documentType').touched">
+    <mat-error *ngIf="documentForm.get('documentType').hasError('pattern')">
       Document Type has to be <strong>PASSPORT or ID_CARD</strong>
     </mat-error>
   </mat-form-field>
@@ -29,7 +29,7 @@
     <input
     formControlName="documentNumber"
     matInput placeholder="Enter Your Document Number" value="">
-    <mat-error *ngIf="documentForm.get('documentNumber').errors && documentForm.get('documentNumber').touched">
+    <mat-error *ngIf="documentForm.get('documentNumber').errors">
       Document Number is <strong>required</strong>
     </mat-error>
   </mat-form-field>
@@ -41,7 +41,7 @@
     <input
     formControlName="documentCountry"
     matInput placeholder="Enter Your Document Country" value="">
-    <mat-error *ngIf="documentForm.get('documentCountry').errors && documentForm.get('documentCountry').touched">
+    <mat-error *ngIf="documentForm.get('documentCountry').errors">
       Document Country is <strong>required</strong>
     </mat-error>
   </mat-form-field>

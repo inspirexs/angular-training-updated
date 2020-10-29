@@ -35,6 +35,11 @@ export class DocsComponent implements OnInit {
 
   clearTraveller(): void{
     this.traveller = null;
+    console.log(this.documentForm.get('documentType').hasError('required'));
+    Object.keys(this.documentForm.controls).forEach(field => {
+      const control = this.documentForm.get(field);
+      control.markAsTouched({ onlySelf: true });
+    });
   }
 
   submitForm(): void{
