@@ -13,6 +13,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { MercuryClientService } from './services/mercury-client.service';
+import { MessageService } from './services/message.service';
 
 
 @NgModule({
@@ -34,6 +36,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     MatDividerModule,
     MatInputModule,
     FlexLayoutModule,
+  ],
+  providers: [
+    MercuryClientService
   ]
 })
 export class SharedModule { }

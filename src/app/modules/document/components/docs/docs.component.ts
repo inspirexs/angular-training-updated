@@ -1,8 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 import { DocumentRequest } from 'src/app/models/document-request';
-import { MercuryClientService } from 'src/app/services/mercury-client.service';
-import { MessageService } from 'src/app/services/message.service';
+import { MercuryClientService } from 'src/app/modules/shared/services/mercury-client.service';
+import { MessageService } from 'src/app/modules/shared/services/message.service';
 import { DocsResultComponent } from './docs-result/docs-result.component';
 
 @Component({
@@ -15,7 +15,8 @@ export class DocsComponent implements OnInit {
   documentForm: FormGroup;
 
   constructor(private mercuryClient: MercuryClientService,
-              private fb: FormBuilder) { }
+              private fb: FormBuilder,
+              private messageService: MessageService) { }
 
   ngOnInit(): void {
     this.documentForm = this.fb.group({
@@ -36,6 +37,7 @@ export class DocsComponent implements OnInit {
 
   clearTraveller(): void{
     this.docsResult.setTraveller(null);
+    this.messageService.getSubject().next('MODULE - WORKS');
   }
 
   submitForm(): void{

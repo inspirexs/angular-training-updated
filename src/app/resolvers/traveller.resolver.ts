@@ -2,7 +2,7 @@ import { Injectable } from '@angular/core';
 import { ActivatedRouteSnapshot, Resolve, RouterStateSnapshot } from '@angular/router';
 import { Observable } from 'rxjs';
 import { Traveller } from '../models/traveller';
-import { MercuryClientService } from '../services/mercury-client.service';
+import { MercuryClientService } from '../modules/shared/services/mercury-client.service';
 import { map } from 'rxjs/operators';
 
 @Injectable()

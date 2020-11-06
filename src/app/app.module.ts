@@ -7,7 +7,6 @@ import { HeaderComponent } from './components/header/header.component';
 import { LoginComponent } from './components/login/login.component';
 import { ContentComponent } from './components/content/content.component';
 
-import { MercuryClientService } from './services/mercury-client.service';
 import { ContentInnerComponent } from './components/content/content-inner/content-inner.component';
 import { RouterModule } from '@angular/router';
 import { appRoutes } from './app.route';
@@ -38,8 +37,6 @@ import { SharedModule } from './modules/shared/shared.module';
     RouterModule.forRoot(appRoutes)
   ],
   providers: [
-    MercuryClientService,
-
     AuthGuard,
 
     TravellerResolver

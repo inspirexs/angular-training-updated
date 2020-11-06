@@ -1,8 +1,8 @@
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
-import { Traveller } from '../models/traveller';
-import { AuthService } from './auth.service';
+import { Traveller } from 'src/app/models/traveller';
+import { AuthService } from 'src/app/services/auth.service';
 
 @Injectable()
 export class MercuryClientService {

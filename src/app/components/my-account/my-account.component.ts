@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Traveller } from 'src/app/models/traveller';
-import { MercuryClientService } from 'src/app/services/mercury-client.service';
+import { MercuryClientService } from 'src/app/modules/shared/services/mercury-client.service';
 
 @Component({
   selector: 'app-my-account',
