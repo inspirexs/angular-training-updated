@@ -12,7 +12,6 @@ import { RouterModule } from '@angular/router';
 import { appRoutes } from './app.route';
 import { Subroute1Component } from './components/content/content-subroutes/subroute1/subroute1.component';
 import { Subroute2Component } from './components/content/content-subroutes/subroute2/subroute2.component';
-import { AuthGuard } from './guards/auth.guard';
 import { MyAccountComponent } from './components/my-account/my-account.component';
 import { TravellerResolver } from './resolvers/traveller.resolver';
 import { SharedModule } from './modules/shared/shared.module';
@@ -37,8 +36,6 @@ import { SharedModule } from './modules/shared/shared.module';
     RouterModule.forRoot(appRoutes)
   ],
   providers: [
-    AuthGuard,
-
     TravellerResolver
   ],
   bootstrap: [AppComponent]

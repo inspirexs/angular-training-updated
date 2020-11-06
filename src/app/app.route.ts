@@ -4,7 +4,7 @@ import { Subroute2Component } from './components/content/content-subroutes/subro
 import { ContentComponent } from './components/content/content.component';
 import { LoginComponent } from './components/login/login.component';
 import { MyAccountComponent } from './components/my-account/my-account.component';
-import { AuthGuard } from './guards/auth.guard';
+import { AuthGuard } from 'src/app/modules/shared/guards/auth.guard';
 import { TravellerResolver } from './resolvers/traveller.resolver';
 
 

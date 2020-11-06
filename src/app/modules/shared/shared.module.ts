@@ -15,6 +15,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MercuryClientService } from './services/mercury-client.service';
 import { MessageService } from './services/message.service';
+import { AuthGuard } from './guards/auth.guard';
 
 
 @NgModule({
@@ -35,10 +36,11 @@ import { MessageService } from './services/message.service';
     MatMenuModule,
     MatDividerModule,
     MatInputModule,
-    FlexLayoutModule,
+    FlexLayoutModule
   ],
   providers: [
-    MercuryClientService
+    MercuryClientService,
+    //AuthGuard
   ]
 })
 export class SharedModule { }
