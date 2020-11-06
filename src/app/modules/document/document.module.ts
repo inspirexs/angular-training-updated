@@ -10,6 +10,7 @@ import { DocsComponent } from './components/docs/docs.component';
 import { DocsResultComponent } from './components/docs/docs-result/docs-result.component';
 import { RouterModule } from '@angular/router';
 import { documentRoutes } from './document.route';
+import { SharedModule } from '../shared/shared.module';
 
 
 
@@ -20,14 +21,8 @@ import { documentRoutes } from './document.route';
   ],
   imports: [
     CommonModule,
-    HttpClientModule,
-    FormsModule,
-    ReactiveFormsModule,
 
-    MatButtonModule,
-    MatIconModule,
-    MatInputModule,
-    FlexLayoutModule,
+    SharedModule,
 
     RouterModule.forChild(documentRoutes)
   ],
