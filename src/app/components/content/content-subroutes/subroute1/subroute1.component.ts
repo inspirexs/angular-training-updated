@@ -15,6 +15,6 @@ export class Subroute1Component implements OnInit {
   }
 
   sendMessage(): void{
-    this.messageService.getSubject().next(this.message);
+    this.messageService.sendMessage(this.message);
   }
 }

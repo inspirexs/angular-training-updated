@@ -14,7 +14,7 @@ export class HeaderComponent implements OnInit {
               private authService: AuthService) { }
 
   ngOnInit(): void {
-    this.messageService.getSubject().subscribe( data => {
+    this.messageService.getMessageReceiver().subscribe(data => {
       this.message = data;
     });
   }

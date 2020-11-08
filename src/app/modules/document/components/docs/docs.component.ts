@@ -37,7 +37,7 @@ export class DocsComponent implements OnInit {
 
   clearTraveller(): void{
     this.docsResult.setTraveller(null);
-    this.messageService.getSubject().next('MODULE - WORKS');
+    this.messageService.sendMessage('MODULE - WORKS');
   }
 
   submitForm(): void{
